@@ -64,10 +64,14 @@ const Navbar = () => {
         </div>
         <ul className="clear-both space-y-4 pt-8 text-lg">
           {menuItems.map((item) => (
-            <MenuItem key={item.path} {...item} onClick={()=>{
-              setIsOpen(false);
-              window.scrollTo({top : 0, behavior : "smooth"});
-            }} />
+            <MenuItem 
+              key={item.path} 
+              {...item} 
+              onClick={()=>{
+                setIsOpen(false);
+                window.scrollTo({top : 0, behavior : "smooth"});}
+              } 
+            />
           ))}
         </ul>
         <select value={language} 
